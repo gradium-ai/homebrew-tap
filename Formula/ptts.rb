@@ -1,29 +1,29 @@
 class Ptts < Formula
   desc "Generate speech locally with Phonon"
   homepage "https://github.com/gradium-ai/xn-ptts"
-  version "0.4.0"
+  version "0.4.2"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     depends_on macos: :sequoia
     on_arm do
-      url "https://github.com/gradium-ai/xn-ptts/releases/download/v0.4.0/ptts-0.4.0-aarch64-apple-darwin.tar.gz"
-      sha256 "7b26c8b9d98f5b5894de09af2aad35e64827e8475c07b003557cafc1ebba6a40"
+      url "https://github.com/gradium-ai/xn-ptts/releases/download/v0.4.2/ptts-0.4.2-aarch64-apple-darwin.tar.gz"
+      sha256 "e606d3c8558ac0f3251275664492bc3330dd3fcab341329ab73a6151e0e4e613"
     end
     on_intel do
-      url "https://github.com/gradium-ai/xn-ptts/releases/download/v0.4.0/ptts-0.4.0-x86_64-apple-darwin.tar.gz"
-      sha256 "17e67ef6e708b885f9a15172ab76be22cb02cdb8bf6afc9d00efcc06ced670b7"
+      url "https://github.com/gradium-ai/xn-ptts/releases/download/v0.4.2/ptts-0.4.2-x86_64-apple-darwin.tar.gz"
+      sha256 "b710c437665bbcf188b407675f87d492625b7b631bdc877de28975db1af5ac03"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/gradium-ai/xn-ptts/releases/download/v0.4.0/ptts-0.4.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "d1ae0e30bcab25bf5efc0c308ec01946b43f797b1bd0b0462037fb1789a61ffc"
+      url "https://github.com/gradium-ai/xn-ptts/releases/download/v0.4.2/ptts-0.4.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "47e8a9247ceb26c199d38909111ff2c8684e190650e5200368c66a840eca0a96"
     end
     on_intel do
-      url "https://github.com/gradium-ai/xn-ptts/releases/download/v0.4.0/ptts-0.4.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4ad1912856e6d91975fbd51b2f3a4dc774badc00eebe85c51a3908d8b1f5cb0a"
+      url "https://github.com/gradium-ai/xn-ptts/releases/download/v0.4.2/ptts-0.4.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "41ac3d986e633a8130c1870a31853043448aa4245c9f41b585edb07bfdc529ad"
     end
   end
 
@@ -40,6 +40,6 @@ class Ptts < Formula
   end
 
   test do
-    assert_equal "ptts 0.4.0\n", shell_output("#{bin}/ptts --version")
+    assert_equal "ptts 0.4.2\n", shell_output("#{bin}/ptts --version")
   end
 end
